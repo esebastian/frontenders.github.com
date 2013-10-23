@@ -4,10 +4,12 @@
   Twitter: https://twitter.com/tonycamaiani
   Location: Valencia (Spain)
 
+  Jekyll conversion : @esebastian
+
 /* THANKS */
   Names (& URL): 
 
 /* SITE */
   Standards: HTML5, CSS3
   Components: Modernizr, jQuery, normalize.css
-  Software:
+  Software: Jekyll

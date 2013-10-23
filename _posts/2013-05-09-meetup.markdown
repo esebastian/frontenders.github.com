@@ -1,0 +1,27 @@
+---
+date: 2013-05-09 19:00h
+category: meetup
+
+first_talk:
+  title: "Angular JS: Introducción"
+  content: |
+    En el primer bloque vamos a ver qué es Angular JS, algo de su historia y las diferencias con otros frameworks Javascript. Además veremos cómo crear una aplicación simple desde cero viendo cada una de las características que nos ofrece.  
+    [slides »](http://www.slideshare.net/JavierArquesHernndez/responsive-web-design-18574084)
+
+    Javier Arques [(@javiarques)](https://twitter.com/javiarques/) es Frontend Developer @ Artvisual
+
+second_talk:
+  title: "Angular JS: Avanzado"
+  content: |
+    En esta segunda parte veremos aspectos más avanzados de Angular JS como la creación de directivas y diversas integraciones con otros frameworks, los cuales nos permiten testear nuestra aplicación o la creación desde cero de la estructura de la misma.
+
+    Javier Carrasco [(@jacarma)](https://twitter.com/jacarma/) es Developer @ Moneymate
+
+special: |
+  ## Especial ![](/img/AngularJS.png "AngularJS")
+
+sponsor:
+  name: ombushop
+  url: http://www.ombushop.com/partners?utm_source=frontenders
+  title: "Programa de Partners: Gana Recomendando a Ombu Shop!  | OmbuShop"
+---

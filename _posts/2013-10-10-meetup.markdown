@@ -1,0 +1,24 @@
+---
+date: 2013-10-10 19:00h
+category: meetup
+
+first_talk:
+  title: "Responsive Images: problemas y soluciones actuales"
+  content: |
+    Analizaremos los problemas actuales con las imágenes en nuestra web: velocidad de conexión, dispositivos con retina display y sus posibles soluciones - hasta que la W3C nos ofrezca una solución.
+
+    Daniel Martínez [(@Wakkos)](https://twitter.com/Wakkos) es Consultor y Instructor Web alrededor del mundo.
+
+second_talk:
+  title: "Aprendiendo y experimentando para enderezar lo que se tuerce"
+  content: |
+    Hablaremos de aprender a equivocarse y de cómo la verdad flota a partir de ejemplos de nuestra nueva web, de la experiencia de los 5 años de Estudio Menta y de cómo funcionamos como interfaz humana entre el front y el back, cómo desde un estudio de diseño gráfico llevamos el proceso de diseño sin perder de vista el desarrollo. Una charla interactiva que irá derivando según la participación de los asistentes.  
+    [slides »](http://localhost:4000/slides/EstudioMentaFrontendersOct2013.pdf)
+
+    Xavi Calvo y Raül Climent son Diseñadores y Socios @ [Estudio Menta](http://estudiomenta.com/) [(@estudioMenta)](https://twitter.com/estudioMenta).
+
+sponsor:
+  name: onbile
+  url: http://job-onbile.zeendo.com/
+  title: "Onbile - Create your mobile website with premium templates"
+---

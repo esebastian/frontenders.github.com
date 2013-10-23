@@ -1,0 +1,27 @@
+---
+date: 2013-06-13 19:00h
+category: meetup
+
+first_talk:
+  title: "Tendencias en el Diseño Web"
+  content: |
+    El diseño web no es sólo dejar un sitio bonito y apañado. Sin duda, la estética de un sitio es más que importante pero el diseño implica muchos más conceptos, como usabilidad, experiencia de usuario, interfaz amigable, interactividad... En la era de la imagen en la que vivimos cuidarlo es fundamental para el éxito del proyecto. Introduciremos las tendencias actuales del diseño en la Web y hablaremos sobre todo lo referente al front-end de las mismas: tecnologías, técnicas, innovación, estilo e interfaces.  
+    [slides »](http://www.alexos.es/fe/#/)
+
+    Alex Olmos [(@alexolmos)](https://twitter.com/alexolmos/) es Diseñador Gráfico y Web @ [alexos](http://www.alexos.es/)
+
+second_talk:
+  title: "Rapid UI development for web apps"
+  content: |
+    We'll talk about how we design complex websites using an iterative and transparent process with our clients, and how we use rapid prototyping to build quicker, and get better results. We'll discuss the design process and winning client approval, and also some of the tools we use to build the sites.  
+    [slides »](http://slid.es/jonlay/rapid-ui-development-for-web-apps)
+
+    Jon Lay [(@jon_lay)](https://twitter.com/jon_lay/) is Frontend Developer and Strategist @ Hanno
+
+    Matthew Lenzi [(@mrteoboat)](https://twitter.com/mrteoboat/) is a Strategist and Project Manager @ Hanno
+
+sponsor:
+  name: turia
+  url: http://www.facebook.com/CervezaTuria
+  title: "Turia Marzen La auténtica cerveza de Valencia"
+---

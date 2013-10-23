@@ -1,223 +1,56 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <title>&lt;frontenders/&gt; Valencia: a meetup for Frontend & UI Developers, UX & Web Designers</title>
-  <meta name="description" content="Frontenders es una reunión mensual centrada en temas de desarrollo frontend, diseño web, UI y UX.">
-  <meta name="author" content="Tony Camaiani http://tony.camaiani.it">
-  <meta name="viewport" content="width=device-width">
-  <link href='http://fonts.googleapis.com/css?family=Rambla:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/libs/modernizr.min.js"></script>
-</head>
-
-<body>
-  <!--[if lt IE 7]>
-      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-  <![endif]-->
-
-  <div id="container">
-    <header>
-      <hgroup class="clearfix">
-        <h1>
-          <a href="index.html">&lt;frontenders/&gt;
-          <span>valencia</span></a>
-        </h1>
-
-        <h2>
-          a meetup for
-          <span>Frontend & UI Developers,</span>
-          <span>UX & Web Designers</span>
-        </h2>
-        <nav>
-          <ul>
-            <li><a href="frontenders.html">¿Que es?</a></li>
-            <li><a class="selected" href="#">Anteriores</a></li>
-          <ul>
-        </nav>
-
-      </hgroup>
-    </header>
+---
+layout: default
+title: "<frontenders/> Valencia: a meetup for Frontend & UI Developers, UX & Web Designers"
+section: past
+---
 
     <div id="main" role="main" class="clearfix">
 
       <h2 class="centered orange scream margin_top_0">Meetups anteriores</h2>
 
-      <h3 class="centered past">jueves 10 octubre 2013</h3>
+      {% for post in site.categories.meetup %}
+      {% unless (post == site.categories.meetup.first or post.undefined) %}
+
+      <h3 class="centered past">{{ post.date | date: "%A %d %B %Y" }}</h3>
+
+      {% if post.special %}
+
+      <section class="centered margin_bottom_20">
+        {{ post.special | markdownify }}
+      </section>
+
+      {% endif %}
 
       <div class="clearfix">
         <section class="content first_box">
-          <h2>Responsive Images: problemas y soluciones actuales</h2>
-          <p>Analizaremos los problemas actuales con las imágenes en nuestra web: velocidad de conexión, dispositivos con retina display y sus posibles soluciones - hasta que la W3C nos ofrezca una solución.</p>
-          <p>Daniel Martínez (<a target="_blank" href="https://twitter.com/Wakkos">@Wakkos</a>) es Consultor y Instructor Web alrededor del mundo.</p>
+          <h2>{{ post.first_talk['title'] }}</h2>
+          {{ post.first_talk['content'] | markdownify }}
         </section>
 
         <section class="content second_box">
-          <h2>Aprendiendo y experimentando para enderezar lo que se tuerce</h2>
-          <p> Hablaremos de aprender a equivocarse y de cómo la verdad flota a partir de ejemplos de nuestra nueva web, de la experiencia de los 5 años de Estudio Menta y de cómo funcionamos como interfaz humana entre el front y el back, cómo desde un estudio de diseño gráfico llevamos el proceso de diseño sin perder de vista el desarrollo. Una charla interactiva que irá derivando según la participación de los asistentes.
-          <a class="block" target="_blank"  href="slides/EstudioMentaFrontendersOct2013.pdf">slides &raquo;</a>
-          </p>
-          <p>Xavi Calvo y Raül Climent
-            son Diseñadores y Socios @ <a target="_blank" href="http://estudiomenta.com/">Estudio Menta</a> (<a target="_blank" href="https://twitter.com/estudioMenta">@estudioMenta</a>).
-          </p>
-          
+          <h2>{{ post.second_talk['title'] }}</h2>
+          {{ post.second_talk['content'] | markdownify }}
         </section>
       </div>
 
-      <section class="full_box centered sponsor home">
-        <h3>Patrocinador</h3>
-        <a class="ir block onbile" target="_blank"  href="http://job-onbile.zeendo.com/" title="Onbile - Create your mobile website with premium templates.">Onbile - Create your mobile website with premium templates.</a>
-      </section>
-
-      <h3 class="centered past">jueves 12 septiembre 2013</h3>
-
-        <section class="content first_box">
-          <h2>Diseño gráfico para no-diseñadores</h2>
-          <p>En algún momento de nuestras vidas todos hemos tenido que diseñar algo: un documento, unas transparencias, una tarjeta de felicitación, una página web... La reacción de un diseñador profesional suele <a href="http://i.imgur.com/71tEcdh.gif" target="_blank">ser algo así</a>.</p> 
-          <p>En esta breve charla hablaremos de "Lo mínimo que todo el mundo debería saber sobre diseño gráfico"&#8482; y veremos recursos de diseño para principiantes. Todo esto con la sana intención de mejorar las relaciones bilaterales entre diseñadores y programadores.
-          <a class="block" target="_blank"  href="http://www.slideshare.net/sezarg/charla-frontenders-diseno">slides &raquo;</a>
-          </p>
-          <p>César (<a target="_blank" href="https://twitter.com/interruptme">@interruptme</a>) es Chico de los Cafés @ robotito.es </p>
-        </section>
-
-        <section class="content second_box">
-          <h2>The mobile web - At a snail‘s pace</h2>
-          <p>Let‘s face it, although we have widespread coverage of 3G in our cities, the mobile web still tends to be terribly slow sometimes.
-          And we as website creators with our cutting edge responsive techniques in our toolbox think that we only have to add some media queries to make our sites mobile friendly.
-          But that isn't the whole picture.</p> 
-          <p>This presentation is going to reveal some of the most essential performance implications of the mobile web.
-          Mastering these techniques and embracing the constraints of mobile can help today‘s webmakers to design more responsibly for devices with limited bandwidth, thus making the overall experience for people on-the-go faster.
-          This results in happier end users, more customers and higher search rankings, which eventually leads to more money.</p>
-          <p>... does your mobile site still load at a snail‘s pace?
-          <a class="block" target="_blank"  href="http://de.slideshare.net/MarcelKalveram/the-mobilewebatasnailspace">slides &raquo;</a>
-          </p>
-          <p>Marcel Kalveram (<a target="_blank" href="https://twitter.com/marcelkalveram">@marcelkalveram</a>) is responsible for the technical side of things @ digital agency JUNGMUT from Cologne/Germany</p>
-        </section>
-
-
-
-      <h3 class="centered past">jueves 13 junio 2013</h3>
-
-       <section class="content first_box">
-        <h2>Tendencias en el Diseño Web</h2>
-        <p>
-          El diseño web no es sólo dejar un sitio bonito y apañado. Sin duda, la estética de un sitio es más que importante pero el diseño implica muchos más conceptos, como usabilidad, experiencia de usuario, interfaz amigable, interactividad... En la era de la imagen en la que vivimos cuidarlo es fundamental para el éxito del proyecto. Introduciremos las tendencias actuales del diseño en la Web y hablaremos sobre todo lo referente al front-end de las mismas: tecnologías, técnicas, innovación, estilo e interfaces.
-          <a class="block" target="_blank"  href="http://www.alexos.es/fe/#/">slides &raquo;</a>
-        </p>
-        <p>Alex Olmos (<a target="_blank" href="https://twitter.com/alexolmos/">@alexolmos</a>) es Diseñador Gráfico y Web @ <a target="_blank" href="http://www.alexos.es/">alexos</a></p>
-
-      </section>
-
-
-       <section class="content second_box">
-        <h2>Rapid UI development for web apps</h2>
-        <p>
-          We'll talk about how we design complex websites using an iterative and transparent process with our clients, and how we use rapid prototyping to build quicker, and get better results. We'll discuss the design process and winning client approval, and also some of the tools we use to build the sites.
-          <a class="block" target="_blank"  href="http://slid.es/jonlay/rapid-ui-development-for-web-apps">slides &raquo;</a>
-        </p>
-        <p>Jon Lay (<a target="_blank" href="https://twitter.com/jon_lay/">@jon_lay</a>) is Frontend Developer and Strategist @ Hanno</p>
-        <p>Matthew Lenzi (<a target="_blank" href="https://twitter.com/mrteoboat/">@mrteoboat</a>) is a Strategist and Project Manager @ Hanno</p>
-      </section>
-
-      <section class="full_box centered sponsor home">
-        <h3>Patrocinador</h3>
-        <a class="ir block turia" target="_blank"  href="http://www.facebook.com/CervezaTuria" title="Turia Marzen La auténtica cerveza de Valencia.">Turia Marzen La auténtica cerveza de Valencia.</a>
-      </section>
-
-      <h3 class="centered past">Jueves 9 mayo 2013</h3>
-
-      <section class="centered margin_bottom_20">
-        <h2>Especial <img class="max_width" src="img/AngularJS.png" title="AngularJS"></h2>
-      </section>
-
-
-      <section class="content first_box">
-        <h2>Angular JS: Introducción</h2>
-        <p>
-          En el primer bloque vamos a ver qué es Angular JS, algo de su historia y las diferencias con otros frameworks Javascript. Además veremos cómo crear una aplicación simple desde cero viendo cada una de las características que nos ofrece.
-          <a class="block" target="_blank"  href="https://speakerdeck.com/jacarui/angularjs-frontenders-vlc">slides &raquo;</a>
-        </p>
-        <p>Javier Casal (<a target="_blank" href="https://twitter.com/jcasalruiz/">@jcasalruiz</a>) es Developer @ Moneymate</p>
-      </section>
-
-      <section class="content second_box">
-        <h2>Angular JS: Avanzado</h2>
-        <p>En esta segunda parte veremos aspectos más avanzados de Angular JS como la creación de directivas y diversas integraciones con otros frameworks, los cuales nos permiten testear nuestra aplicación o la creación desde cero de la estructura de la misma.</p>
-        <p>Javier Carrasco (<a target="_blank" href="https://twitter.com/jacarma/">@jacarma</a>) es Developer @ Moneymate</p>
-      </section>
-
-      <section class="full_box centered sponsor">
-        <h3>Patrocinador</h3>
-        <a class="ir block ombushop first_image" target="_blank"  href="http://www.ombushop.com/partners?utm_source=frontenders" title="  Programa de Partners: Gana Recomendando a Ombu Shop!  | OmbuShop">OmbuShop</a>
-      </section>
-
-      <h3 class="centered past margin_top_40">Jueves 11 abril 2013</h3>
-
-      <section class="content first_box">
-        <h2>Responsive Web Design</h2>
-        <p>
-          En esta primera charla Javi nos dará algunos consejos y trucos prácticos para desarrollar un proyecto "responsive", ya sea empezando de cero, o adaptando uno existente. Hablaremos de media queries, flexible media, responsive frameworks y mucho más, y todo ello aplicándolo a un proyecto real, en vivo y en directo.
-          <a class="block" target="_blank"  href="http://www.slideshare.net/JavierArquesHernndez/responsive-web-design-18574084">slides &raquo;</a>
-        </p>
-        <p>Javier Arques (<a target="_blank" href="https://twitter.com/javiarques/">@javiarques</a>) es Frontend Developer @ Artvisual</p>
-      </section>
-
-      <section class="content second_box">
-        <h2>Asset Packaging</h2>
-        <p>
-          El asset packaging es un conjunto de técnicas que se aplican ya en casi todos los proyectos web, y que permite, entre otras cosas, mejorar el rendimiento cuando hay una gran cantidad de recursos que servir. Esta charla será una introducción a estas técnicas y sus ventajas, y discutiremos distintas formas de implementarlas.
-          <a class="block" target="_blank"  href="http://miguelonrails.com/assetpackaging-slides/#/">slides &raquo;</a>
-        </p>
-        <p>Miguel Angel Fernandez (<a target="_blank" href="https://twitter.com/elmendalerenda/">@elmendalerenda</a>) es Developer @ beCode</p>
-      </section>
-
+      {% if post.notes %}
 
       <section class="full_box">
-        En este primer meetup, habrá también una pequeña presentación del evento por Tony Camaiani (<a target="_blank" href="https://twitter.com/tonycamaiani/">@tonycamaiani</a>), Frontend Developer @ peerTransfer
+        {{ post.notes | markdownify }}
       </section>
 
-      <section class="full_box centered sponsor">
+      {% endif %}
+
+      {% if post.sponsor %}
+
+      <section class="full_box centered sponsor home">
         <h3>Patrocinador</h3>
-        <a class="ir block qikker first_image" target="_blank"  href="http://www.qikkeronline.nl/searching-freelance-developers-valencia-spain/" title="Qikker Online is looking for Freelance Developers in Valencia, Spain">Qikker Online</a>
+        <a class="ir block {{ post.sponsor['name'] }}" target="_blank" href="{{ post.sponsor['url'] }}" title="{{ post.sponsor['title'] }}">{{ post.sponsor['title'] }}</a>
       </section>
 
+      {% endif %}
 
+      {% endunless %}
+      {% endfor %}
 
     </div>
-    <footer class="clearfix">
-
-      <section class="first">
-        <h3>Participa</h3>
-        <p>
-          ¿Quieres participar en una de las
-          próximas reuniones? Escribe a
-          <a href="mailto:frontendersvalencia@gmail.com">frontendersvalencia@gmail.com</a>
-        </p>
-      </section>
-      <section class="middle">
-        <h3>Síguenos</h3>
-        <p>
-          <a target="_blank" href="https://twitter.com/frontendersVLC">@frontendersVLC</a>
-          <a target="_blank" href="https://twitter.com/search?q=%23frontendersVLC">#frontendersVLC</a>
-        </p>
-      </section>
-      <section class="last">
-        <h3>Partner</h3>
-        <p>
-          <a class="ir block workether" target="_blank"  href="http://www.workether.com/" title="Workether / Inspiración Colectiva y Coworking en Valencia">Workether</a>
-        </p>
-      </section>
-
-    </footer>
-  </div> <!--! end of #container -->
-  <script>
-    var _gaq=[['_setAccount','UA-39434678-1'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
-</body>
-</html>

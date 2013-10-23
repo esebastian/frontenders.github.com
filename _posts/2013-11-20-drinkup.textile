@@ -1,0 +1,8 @@
+---
+date: 2013-11-20 19:00
+category: drinkup
+
+location-url: "https://maps.google.es/maps?oe=utf-8&client=firefox-a&channel=fflb&ie=UTF8&q=Caf%C3%A9+Carajillo&fb=1&gl=es&hq=cafe+carajillo&hnear=0xd604f4cf0efb06f:0xb4a351011f7f1d39,Valencia&cid=0,0,7146331353855454642&t=h&ll=39.478738,-0.347292&spn=0.005797,0.012875&z=16&iwloc=A&output=embed"
+---
+
+p(margin_top_0). Quedamos cada miércoles después del meetup, para conocernos y hablar delante de un aperitivo. Este mes nos vemos en el Café Carajillo, en Plaza Xúquer, 11
